@@ -1,7 +1,9 @@
 FactMiners - ICOM CIDOC-CRM into Neo4j via Py2Neo
 ==========
 
-The FactMiners social-game developers' community will use the ISO-standard Conceptual Reference Model of the international museum community for managing the underlying relationship between digital cultural heritage collection management and hosting a FactMiners Fact Cloud. IOW, the best way to make it easy for museum's and archives to participate in the FactMiners community, is to provide a state-of-the-art flexible, extensible digital cultural heritage collection management platform.
+**Update 6 Nov 2014**: The 0.2 'seed' database is current to Neo4j 2.x. and the cidocCRM_0.2.cypher.zip file contains a Neo4j shell 'dump' of the 0.2 database in the event that the actual zipped database does not work for you. 
+
+The FactMiners social-game developers' community will use the ISO-standard Conceptual Reference Model of the International Council of Museums for managing the underlying relationship between digital cultural heritage collection management and hosting a FactMiners Fact Cloud. IOW, the best way to make it easy for museum's and archives to participate in the FactMiners community, is to provide a state-of-the-art flexible, extensible digital cultural heritage collection management platform.
 
 This goal is the basis of our collaboration with the brilliant designer-developers of www.Structr.org, the next-generation Content Management System (a stealth understatement if ever there was one! :-)) built on the Neo4j graph database.
 
@@ -18,3 +20,4 @@ BTW, Axel and Christian, I believe this version of the CIDOC-CRM will be most us
 --Jim Salmons--
 Cedar Rapids, Iowa USA
 03/26/2014
+

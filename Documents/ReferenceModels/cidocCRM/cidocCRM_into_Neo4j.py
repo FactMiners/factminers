@@ -32,7 +32,7 @@ rels_index = graph_db.get_or_create_index(neo4j.Relationship, "crmClassRels")
 
 ###
 ##
-# OGM class - not used so far... Oops!
+# OGM class
 #
 class CRMclass(object):
 
@@ -89,7 +89,10 @@ def decode_property(property_stmt):
             crm_id = match.group(6).strip()
             recip_name = None
             range_name = match.group(7).strip()
-        neo_name = prop_name.upper().replace(' ', '_')
+        # Following the Neo4j convention of UPPERCASE_with_underscores for relationship names
+        # neo_name = prop_name.upper().replace(' ', '_')
+        # Following the #cidocCRM convention of mixed case but adding underscores for spaces
+        neo_name = prop_name.replace(' ', '_')
         prop_spec = {'NEO_NAME' : neo_name,
             'crm_id' : crm_id,
             'prop_name': prop_name, 
@@ -108,7 +111,8 @@ def decode_property(property_stmt):
 raw_lines=deque([])                        # will hold the lines of the file
 
 # with open("cidocCRM_WTFmf.txt",'rU') as crm_file:
-with open("cidoc_crm_5.1.2_classes_clean.txt",'rU') as crm_file:
+# with open("cidoc_crm_5.1.2_classes_clean.txt",'rU') as crm_file:
+with open("cidoc_crm_min_reduced_5.1.2.txt",'rU') as crm_file:
     for line in crm_file:                  # for each line of the file
         line=line.rstrip()                  # remove leading and trailing crap
         if line:                           # skip blank lines
